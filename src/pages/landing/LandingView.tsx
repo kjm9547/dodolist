@@ -47,7 +47,8 @@ export const LandingView = () => {
                     backgroundColor:color ,
                     color:title=="로그인"?colors.BUTTON_SIGNUP:"white",
                     fontSize:22,
-                    fontWeight:'bold'
+                    fontWeight:'bold',
+                    marginRight:5
                 }}
                 onClick={onPressButton}
                 title={title}>{title}</button>
@@ -78,10 +79,10 @@ export const LandingView = () => {
             <div style={{
                 display: 'flex',
                 height: '15vh',
-                width:"20%",
+                width:"40%",
                 flexDirection: 'row',
                 alignItems: "center",
-                justifyContent:"space-between",
+                justifyContent:"center"
             }}>
                 <Button
                     title="로그인"

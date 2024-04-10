@@ -1,3 +1,4 @@
+import { MainCalandarView } from "./MainCalanderView"
 
 export const MainContentView = () => {
     return(
@@ -7,13 +8,16 @@ export const MainContentView = () => {
             boxSizing:"content-box",
             padding:40,
             display:"flex",
-            flexDirection:"row"
+            flexDirection:"row",
         }}>
-            <div style={{flex:0.7,border:'1px solid black'}}>
-            <h2>메인 페이지입니다.</h2>
+            <div style={{
+                display:"flex",
+                flex:0.7,border:'1px solid black'}}>
+            
+            <MainCalandarView/>
             </div>
-            <div style={{flex:0.3,border:'1px solid black'}}>
-
+            <div style={{ display:"flex",flex:0.3,border:'1px solid black'}}>
+            
             </div>
            
         </div>

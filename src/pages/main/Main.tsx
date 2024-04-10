@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { Header } from "../../components/Header"
 import { MainContentView } from "./MainContentView"
 
+
 export const Main = () =>{
     return(
             
@@ -16,7 +17,7 @@ export const Main = () =>{
                 }}>
                     <Header/>
                     <MainContentView/>
-                
+                    
             </div>
     )
 
