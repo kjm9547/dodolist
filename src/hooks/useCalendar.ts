@@ -2,6 +2,7 @@ import dayjs from 'dayjs'
 
 export const useCalendar = () =>{
    const dayOfWeek = ['일','월','화','수','목','금','토']
+   
    const showDayJs = () =>{
     const now = dayjs()
     console.log(now)
@@ -17,23 +18,49 @@ export const useCalendar = () =>{
    const getCalendarColumns = (now:any) => {
     //now는 페이지에서 함수 호출시 현재 시간을 만들어 전달
     const start = dayjs(now).startOf('month')
+    
     const end = dayjs(now).endOf('month')
     const endDate = dayjs(end).get('date') // 마지막 날의 값을 받아옴 31 30 29 28 얘네가 배열의 크기 결정
+    console.log(dayjs(start).get('day'))
 
     //console.log(start,end,endDate)
-
     const columns = [];
+    for(let i = 0; i<=dayjs(start).get('day'); i ++){
+        console.log("####")
+        columns.push(null)
+        
+    }
+    
     for(let i =0; i< endDate; i++){
         const date = dayjs(start).add(i,"day");
         columns.push(date)
     }
     //console.log("columns data  == ",columns)
-
+    for(let i = 0; i<=dayjs(end).get('day'); i ++){
+        console.log("####")
+        columns.push(null)
+        
+    }
     return columns
+   }
+
+   const getDay = (date:any) => {
+        return dayjs(date).get('D')
+   }
+   const getMonth = (date:any) => {
+    
+        return dayjs(date).get('M')
+   }
+   const getYear = (date:any) => {
+    
+        return dayjs(date).get('y')
    }
     return{
         showDayJs,
         getCalendarColumns,
-        dayOfWeek
+        dayOfWeek,
+        getDay,
+        getMonth,
+        getYear
     }
 }

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 export const LandingView = () => {
     const navigate= useNavigate()
     const onPressSignIn= () => {
-        navigate("/main")
+        navigate("/signin")
     }
     const onPressSignUp = () => {
 

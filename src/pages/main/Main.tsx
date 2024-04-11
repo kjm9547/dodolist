@@ -7,7 +7,7 @@ export const Main = () =>{
     return(
             
             <div style={{
-                border: '1px solid blue',
+                border: '1px solid black',
                 display:'flex',
                 flex:1,
                 width:'100%',

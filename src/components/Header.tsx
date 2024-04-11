@@ -27,7 +27,6 @@ export const Header = () => {
                     flex: 0.9,
                     height: '7vh',
                     borderRadius: 25,
-                    
                     display: "flex"}}>
                     <input style={{
                         flex: 1,
