@@ -10,7 +10,7 @@ export const LandingView = () => {
         navigate("/signin")
     }
     const onPressSignUp = () => {
-
+        navigate("/signup")
     }
     const Button = ({
         title,
@@ -82,7 +82,8 @@ export const LandingView = () => {
                 width:"40%",
                 flexDirection: 'row',
                 alignItems: "center",
-                justifyContent:"center"
+                justifyContent:"center",
+                
             }}>
                 <Button
                     title="로그인"
